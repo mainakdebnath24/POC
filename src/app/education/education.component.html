@@ -1,0 +1,80 @@
+<div class="container-fluid py-5 px-5">
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-12 py-4 card">
+            <form [formGroup]="eduCreationForm"  novalidate>
+                <h2>Form</h2>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="form-group">
+                    <label for="secName">Name of Secondary School:</label>
+                    <input type="text" class="form-control" formControlName="secname" id="secName" placeholder="Enter School Name">
+                    <div class="text text-danger" *ngIf="eduCreationForm.get('secname').touched && eduCreationForm.get('secname').hasError('required')"><small>School Name is required</small></div>
+                    <div class="text text-danger" *ngIf="eduCreationForm.get('secname').dirty && eduCreationForm.get('secname').hasError('maxlength')"><small>School Name cannot exceed 50 characters</small></div>
+                </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <label for="secNum">Percentage :</label>
+                        <input type="text" class="form-control" formControlName="secnum" id="secNum" placeholder="Enter Percentage" min="1" max="100">
+                        <div class="text text-danger" *ngIf="eduCreationForm.get('secnum').touched && eduCreationForm.get('secnum').hasError('required')"><small>Percentage is required</small></div>
+                        <div class="text text-danger" *ngIf="eduCreationForm.get('secnum').dirty && eduCreationForm.get('secnum').hasError('maxlength')"><small>Percentage cannot exceed 2 characters</small></div>    
+                                    <div class="text text-danger" *ngIf="eduCreationForm.get('secnum').dirty && eduCreationForm.get('secnum').hasError('pattern')"><small>Percentage should be a number</small></div>   
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label for="srSecName">Name of Senior Secondary School:</label>
+                        <input type="text" class="form-control" formControlName="srsecname" id="srSecName" placeholder="Enter School Name">
+                        <div class="text text-danger" *ngIf="eduCreationForm.get('srsecname').touched && eduCreationForm.get('srsecname').hasError('required')"><small>School Name is required</small></div>
+                        <div class="text text-danger" *ngIf="eduCreationForm.get('srsecname').dirty && eduCreationForm.get('srsecname').hasError('maxlength')"><small>School Name cannot exceed 50 characters</small></div>
+                    </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <label for="srSecNum">Percentage :</label>
+                            <input type="text" class="form-control" formControlName="srsecnum" id="srSecNum" placeholder="Enter Percentage" min="1" max="100">
+                            <div class="text text-danger" *ngIf="eduCreationForm.get('srsecnum').touched && eduCreationForm.get('srsecnum').hasError('required')"><small>Percentage is required</small></div>
+                            <div class="text text-danger" *ngIf="eduCreationForm.get('srsecnum').dirty && eduCreationForm.get('srsecnum').hasError('maxlength')"><small>Percentage cannot exceed 2 characters</small></div>    
+                                    <div class="text text-danger" *ngIf="eduCreationForm.get('srsecnum').dirty && eduCreationForm.get('srsecnum').hasError('pattern')"><small>Percentage should be a number</small></div>   
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="uniName">Name of University:</label>
+                            <input type="text" class="form-control" formControlName="uniname" id="uniName" placeholder="Enter University Name">
+                            <div class="text text-danger" *ngIf="eduCreationForm.get('uniname').touched && eduCreationForm.get('uniname').hasError('required')"><small>University Name is required</small></div>
+                            <div class="text text-danger" *ngIf="eduCreationForm.get('uniname').dirty && eduCreationForm.get('uniname').hasError('maxlength')"><small>University Name cannot exceed 50 characters</small></div>
+                        </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <label for="uniNum">Percentage :</label>
+                                <input type="text" class="form-control" formControlName="uninum" id="uniNum" placeholder="Enter Percentage" min="1" max="100">
+                                <div class="text text-danger" *ngIf="eduCreationForm.get('uninum').touched && eduCreationForm.get('uninum').hasError('required')"><small>Percentage is required</small></div>
+                                <div class="text text-danger" *ngIf="eduCreationForm.get('uninum').dirty && eduCreationForm.get('uninum').hasError('maxlength')"><small>Percentage exceed 2 characters</small></div>    
+                                    <div class="text text-danger" *ngIf="eduCreationForm.get('uninum').dirty && eduCreationForm.get('uninum').hasError('pattern')"><small>Percentage should be a number</small></div>   
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label for="compName">Name of Last Company:</label>
+                                <input type="text" class="form-control" formControlName="compname" id="compName" placeholder="Enter Company Name">
+                                <div class="text text-danger" *ngIf="eduCreationForm.get('compname').touched && eduCreationForm.get('compname').hasError('required')"><small>Company Name is required</small></div>
+                                <div class="text text-danger" *ngIf="eduCreationForm.get('compname').dirty && eduCreationForm.get('compname').hasError('maxlength')"><small>Company Name cannot exceed 50 characters</small></div>
+                            </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <label for="compNum">No. of years</label>
+                                    <input type="text" class="form-control" formControlName="compnum" id="compNum" placeholder="Enter No. of years">
+                                    <div class="text text-danger" *ngIf="eduCreationForm.get('compnum').touched && eduCreationForm.get('compnum').hasError('required')"><small>No. of years is required</small></div>
+                                    <div class="text text-danger" *ngIf="eduCreationForm.get('compnum').dirty && eduCreationForm.get('compnum').hasError('maxlength')"><small>No. of years cannot exceed 2 characters</small></div>    
+                                    <div class="text text-danger" *ngIf="eduCreationForm.get('compnum').dirty && eduCreationForm.get('compnum').hasError('pattern')"><small>No. of years should be a number</small></div>    
+                                </div>
+                                </div>
+                <div class="row">
+                    <button [disabled]="!eduCreationForm.valid" type="submit" class="btn btn-primary ml-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
